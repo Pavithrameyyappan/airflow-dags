@@ -18,7 +18,7 @@ with DAG(
     default_args=default_args,
     description='DAG to run a script on a remote worker via Celery queue',
     schedule=None,  # manual trigger only
-    start_date=datetime(2026, 01, 07),
+    start_date=datetime(2026, 1, 7),
     catchup=False,
     tags=['remote_worker'],
 ) as dag:
