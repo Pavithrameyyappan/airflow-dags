@@ -23,11 +23,11 @@ with DAG(
     tags=['remote_worker'],
 ) as dag:
 
-    run_remote_script = BashOperator(
-        task_id='run_remote_script',
-        bash_command='/opt/airflow/venv/py-env/bin/python "/opt/airflow/scripts/LEO AWS Migration/prefect_flows/ETL/RAW_to_STAGE_ETL.py"',
-        queue='remote_queue',  # ensure this runs on the remote worker
-    )
+   run_remote_script = BashOperator(
+    task_id='run_remote_script',
+    bash_command='/opt/airflow/venv/py-env/bin/python "/opt/airflow/scripts/LEO%20AWS%20Migration/prefect_flows/ETL/RAW_to_STAGE_ETL.py"',
+    queue='remote_queue',
+   )
 
-    run_remote_script
+run_remote_script
 
